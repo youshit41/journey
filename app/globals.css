@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  @apply bg-bg text-ivory antialiased overflow-x-hidden;
+  background-image: radial-gradient(circle at top, rgba(231,199,194,0.1), transparent 45%);
+}
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  mix-blend-mode: soft-light;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
